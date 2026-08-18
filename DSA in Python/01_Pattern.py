@@ -1,5 +1,13 @@
 # Print square pattern
 
+"""
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+"""
+
 def printSquarePattern(rows, cols):
     for i in range(rows):
         for j in range(cols):

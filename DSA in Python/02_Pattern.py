@@ -1,3 +1,11 @@
+"""
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+"""
+
 def printPattern02(rows , cols):
     for i in range(rows):
         for j in range(cols):
