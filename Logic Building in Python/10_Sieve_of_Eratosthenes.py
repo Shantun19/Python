@@ -21,12 +21,12 @@ def sieveOfErtosthenes(num):
     
     # collect all the prime number from the all_number_till_num array
     prime_numbers = []
+
     for i in range(2 , num + 1):
         if all_number_till_num[i]:
             prime_numbers.append(i)
     
     return prime_numbers
-
 
 if __name__ == "__main__":
     num = int(input("Enter any Number !"))
