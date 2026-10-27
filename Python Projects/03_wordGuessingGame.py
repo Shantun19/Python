@@ -1,58 +1,35 @@
-
 import random
 
 
-WORDS = [
-    "rainbow",
-    "computer",
-    "science",
-    "programming",
-    "python",
-    "mathematics",
-    "player",
-    "condition",
-    "reverse",
-    "water",
-    "board",
-    "geeks",
-]
+WORDS = ["rainbow","computer","science","programming","python","mathematics","player","condition","reverse","water","board","geeks"]
 
 MAX_ATTEMPTS = 12
-
 
 def choose_word():
     """Return a random word from the word list."""
     return random.choice(WORDS)
 
-
 def display_word(word, guessed_letters):
     """Return the word with unguessed letters hidden."""
     result = []
-
     for letter in word:
         if letter in guessed_letters:
             result.append(letter)
         else:
             result.append("_")
-
     return " ".join(result)
-
 
 def get_valid_guess(guessed_letters):
     """Ask for a valid letter that has not been guessed."""
     while True:
         guess = input("Guess a letter: ").strip().lower()
-
         if len(guess) != 1 or not guess.isalpha():
             print("Please enter one letter.")
             continue
-
         if guess in guessed_letters:
             print("You already guessed that letter.")
             continue
-
         return guess
-
 
 def play_game():
     """Run one complete round of the game."""
@@ -88,14 +65,10 @@ def play_game():
 def main():
     """Start the application."""
     name = input("What is your name? ").strip()
-
     if not name:
         name = "Player"
-
     print(f"\nGood luck, {name}!")
-
     play_game()
-
 
 if __name__ == "__main__":
     main()
