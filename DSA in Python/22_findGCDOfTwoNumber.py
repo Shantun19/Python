@@ -1,4 +1,7 @@
 def getGCD(num1 , num2):
+    # base condition
+    if num1 == 0 or num2 == 0:
+        return max(num1 , num2)
     # first get the minimun from both the number because gcd <= min(a,b) we no need to check for the values which is greater than a.
     min_number = min(num1 , num2)
     # we need to find the greater divisor so we will starts the loop from the end means in the reverse order.
