@@ -8,6 +8,8 @@ def checkIsPrime(num):
     
     return True
 
+# this is square root trial division method - u need to travese only upto the square root of the no. 
+# if any number between 2 to sqaure root of that number divides the nimber then the number is not the prime number.
 def checkPrimeUsingSquareRootTrialDivision(num):
     # base condtion 
     if(num < 2):
@@ -17,7 +19,6 @@ def checkPrimeUsingSquareRootTrialDivision(num):
         if(num%i == 0):
             return False
     return True
-
 
 if __name__ == "__main__":
     num = 3
